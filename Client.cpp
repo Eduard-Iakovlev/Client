@@ -87,6 +87,11 @@ void Client::client(){
 	server_address(user);
 	while(_work){
 		send_message(user);
+		if(_connection != 0){
+			std::cout << " Соединение прервано" << std::endl;
+			exit(1);
+		}
+		
 	}
 	farewell();
 	close_socket();
