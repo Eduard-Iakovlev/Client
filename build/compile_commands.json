@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/eduard/projects/TCP/Client/build",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -o CMakeFiles/Client.dir/main_Client.cpp.o -c /home/eduard/projects/TCP/Client/main_Client.cpp",
+  "file": "/home/eduard/projects/TCP/Client/main_Client.cpp"
+},
+{
+  "directory": "/home/eduard/projects/TCP/Client/build",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -o CMakeFiles/Client.dir/User.cpp.o -c /home/eduard/projects/TCP/Client/User.cpp",
+  "file": "/home/eduard/projects/TCP/Client/User.cpp"
+},
+{
+  "directory": "/home/eduard/projects/TCP/Client/build",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -o CMakeFiles/Client.dir/Client.cpp.o -c /home/eduard/projects/TCP/Client/Client.cpp",
+  "file": "/home/eduard/projects/TCP/Client/Client.cpp"
+},
+{
+  "directory": "/home/eduard/projects/TCP/Client/build",
+  "command": "/usr/bin/c++ -g -std=gnu++20 -o CMakeFiles/Client.dir/Get.cpp.o -c /home/eduard/projects/TCP/Client/Get.cpp",
+  "file": "/home/eduard/projects/TCP/Client/Get.cpp"
+}
+]
