@@ -29,7 +29,7 @@ public:
 
 	void greeting();
 	void farewell();
-	void menu_chat();
+	void menu();
 	void send_message(User& user);
 
 	void clean_console();

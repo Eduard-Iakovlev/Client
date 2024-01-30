@@ -1,4 +1,5 @@
 ﻿#include "Client.h"
+#include <future>
 
 //----------- Создание сокета ---------------------------
 void Client::socket_file() {
@@ -53,11 +54,15 @@ void Client::farewell() {
 	std::cout << "\n\n          Всего хорошего.\n";
 }
 
-//---------------- Меню в аккаунте -------------------------------------------------------
-void Client::menu_chat() {
+//-------------------- Меню -------------------------------------------------------------
+void Client::menu() {
 	std::cout << "\n Для завершени нажмите \'Esc\'\n";
 	_menu = _getch();
-	if(_menu == _esc) _work = false;
+	if(_menu == _esc) {
+		farewell();
+		close_socket();
+		exit(0);
+	}
 }
 
 //------------- Создание и отправка сообщения ---------------------------------------
@@ -77,7 +82,7 @@ void Client::system_pause(int second){
 
 }
 
-//----------------- Основная функция работы чата -------------------------------------------
+//----------------- Основная функция работы клиента -------------------------------------------
 void Client::client(){
 
 	greeting();
@@ -85,14 +90,11 @@ void Client::client(){
 	user.get_user();
 	socket_file();
 	server_address(user);
+	std::future<void> m = std::async(std::launch::async, &Client::menu, this);
 	while(_work){
 		send_message(user);
-		if(_connection != 0){
-			std::cout << " Соединение прервано" << std::endl;
-			exit(1);
-		}
-		
 	}
+	m.wait();
 	farewell();
 	close_socket();
 }
