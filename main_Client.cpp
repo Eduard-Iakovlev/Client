@@ -2,5 +2,5 @@
 
 int main(){
 	Client client;
-	client.client();
+	client.client_start();
 }

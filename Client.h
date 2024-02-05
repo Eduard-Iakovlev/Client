@@ -35,7 +35,7 @@ public:
 	void clean_console();
 	void system_pause(int second);
 
-	void client();
+	void client_start();
 private:
 
 	int _socket_file_descriptor, _connection;

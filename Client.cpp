@@ -56,9 +56,10 @@ void Client::farewell() {
 
 //-------------------- Меню -------------------------------------------------------------
 void Client::menu() {
-	std::cout << "\n Для завершени нажмите \'Esc\'\n";
+	std::cout << "\n Для завершения нажмите \'Esc\'\n";
 	_menu = _getch();
 	if(_menu == _esc) {
+		transmitting("exit");
 		farewell();
 		close_socket();
 		exit(0);
@@ -83,7 +84,7 @@ void Client::system_pause(int second){
 }
 
 //----------------- Основная функция работы клиента -------------------------------------------
-void Client::client(){
+void Client::client_start(){
 
 	greeting();
 	User user;
