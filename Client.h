@@ -14,8 +14,7 @@
 #include "User.h"
 #include "Consol_Input.h"
 
-#define MESSAGE_LENGTH 1024 // Максимальный размер буфера для данных
-//#define PORT 7777 // Будем использовать этот номер порта
+#define MESSAGE_LENGTH 1024 
 
 
 class Client{
@@ -27,15 +26,15 @@ public:
 	std::string message();// Перевод сообщения в стринг
 	void transmitting(const std::string& mess); //отправка данных
 
-	void greeting();
-	void farewell();
-	void menu();
-	void send_message(User& user);
+	void greeting(); //Приветствие
+	void farewell(); // Прощание
+	void menu(); // Меню
+	void send_message(User& user); //Создание о отправка сообщения
 
-	void clean_console();
-	void system_pause(int second);
+	void clean_console(); //Очистка консоли
+	void system_pause(int second); // Паузза
 
-	void client_start();
+	void client_start(); // Запуск
 private:
 
 	int _socket_file_descriptor, _connection;
